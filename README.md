@@ -1,7 +1,6 @@
 # Stock Market Signals API
 
-[![CircleCI](https://circleci.com/gh/nameko/nameko-examples/tree/master.svg?style=svg)](https://circleci.com/gh/nameko/nameko-examples/tree/master)
-[![CircleCI](https://circleci.com/gh/joaogabriellima/deepinvestclub/tree/master.svg?style=svg&circle-token=77f7cd1ae88450e93e899554117986cf12ee10e9)](https://circleci.com/gh/nameko/nameko-examples/tree/master)
+*Scrapinghub this is for you!* 
 
 ## Overview
 
