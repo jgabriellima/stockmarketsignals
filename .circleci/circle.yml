@@ -1,0 +1,29 @@
+machine:
+  python:
+    version: 3.4.3
+  services:
+    - docker
+    - rabbitmq-server
+  pre:
+    - sudo rabbitmq-plugins enable rabbitmq_management
+
+dependencies:
+  pre:
+    - pip install -U pip wheel setuptools
+    - pip install -U signals/[dev] gateway/[dev]
+
+test:
+  override:
+    - HTMLCOV_DIR=$CIRCLE_ARTIFACTS make coverage
+
+deployment:
+  docker-latest:
+    branch: master
+    commands:
+      - make docker-login
+      - TAG=latest make push-images
+  docker-dev:
+    branch: /.*/
+    commands:
+      - make docker-login
+      - TAG=dev make push-images

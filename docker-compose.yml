@@ -1,0 +1,40 @@
+version: "2"
+services:
+  rabbit:
+    container_name: stockmarketsignals-rabbitmq
+    image: stockmarketsignals:3.6-management
+    ports:
+        - "15673:15672" # Exposing RabbitMQ web management on different port for convenience
+    restart: always
+
+  signals:
+    container_name: stockmarketsignals-signals
+    image: joaogabriellima/stockmarketsignals-signals:latest
+    depends_on:
+      - rabbit
+    ports:
+        - "8003:8000"
+    links:
+        - "rabbit:stockmarketsignals-rabbitmq"
+    environment:
+        RABBIT_PASSWORD: "guest"
+        RABBIT_USER: "guest"
+        RABBIT_HOST: "rabbit"
+        RABBIT_PORT: "5672"
+        RABBIT_MANAGEMENT_PORT: "15672"
+
+  gateway:
+    container_name: stockmarketsignals-gateway
+    image: joaogabriellima/stockmarketsignals-gateway:latest
+    depends_on:
+      - rabbit
+    ports:
+        - "8003:8000"
+    links:
+        - "rabbit:stockmarketsignals-rabbitmq"
+    environment:
+        RABBIT_PASSWORD: "guest"
+        RABBIT_USER: "guest"
+        RABBIT_HOST: "rabbit"
+        RABBIT_PORT: "5672"
+        RABBIT_MANAGEMENT_PORT: "15672"

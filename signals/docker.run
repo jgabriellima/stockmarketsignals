@@ -1,0 +1,18 @@
+FROM stockmarketsignals-base
+
+ADD wheelhouse /var/stockmarketsignals/wheelhouse
+
+COPY config.yml /var/stockmarketsignals/config.yml
+COPY run.sh /var/stockmarketsignals/run.sh
+
+RUN chmod +x /var/stockmarketsignals/run.sh
+
+WORKDIR /var/stockmarketsignals/
+
+RUN . /appenv/bin/activate; \
+    pip install --no-index -f wheelhouse stockmarketsignals_signals
+
+EXPOSE 8000
+
+CMD . /appenv/bin/activate; \
+    /var/stockmarketsignals/run.sh;
