@@ -13,7 +13,7 @@ Based on a microservice architecture, it can be deployed in any infrastructure.
 
 ![Services](StockMarketSignals.png)
 
-#Solution Description
+# Solution Description
 
 The project has, for the time being, a microservice and an API gateway.
 The Microservice called Signals has a Web Scraper that obtains data from market signals from 3 of the major websites specialized in the financial market:
