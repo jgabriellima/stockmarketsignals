@@ -134,7 +134,7 @@ $ n.rpc.signals.getAll("USD/JPY")
 ```
 
 # About me:
-I am currently a CTO at Epitrack, a university professor and developer of solutions involving Deep Learning and Big Data. With more than 10 years of experience in the technology market, I am currently a PhD candidate in Artificial Intelligence and enthusiastic about new technologies, always attending to news that can accelerate scientific and technological development, generating impact and helping to improve people's lives.
+I am Full Stack Engineer, university professor and developer of solutions using Deep Learning and Big Data. With more than 10 years of experience in the technology market, I am currently a PhD candidate in Artificial Intelligence and enthusiastic about new technologies, always attending to news that can accelerate scientific and technological development, generating impact and helping to improve people's lives.
 
 #### Other interesting works:
 - [$ 778.75 in one day investing in the financial market with a deep neural network](https://medium.com/@joaogabriellima/778-75-em-um-dia-investindo-no-mercado-financeiro-com-uma-deep-neural-network-2b5a917e31d4)
