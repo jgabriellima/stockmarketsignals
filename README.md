@@ -1,7 +1,5 @@
 # Stock Market Signals API
 
-*Scrapinghub this is for you!* 
-
 ## Overview
 
 Currently investing in the financial market is becoming commonplace in people's lives. At all times new strategies, services and systems are emerging to automate the analysis and execution of investments.
